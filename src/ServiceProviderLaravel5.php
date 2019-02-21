@@ -14,7 +14,7 @@ class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__.'/config/config.php' => config_path('slack.php')]);
+        $this->publishes([__DIR__ . '/config/config.php' => config_path('slack.php')]);
     }
 
     /**
@@ -24,9 +24,9 @@ class ServiceProviderLaravel5 extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/config/config.php', 'slack');
+        $this->mergeConfigFrom(__DIR__ . '/config/config.php', 'slack');
 
-        $this->app['maknz.slack'] = $this->app->share(function ($app) {
+        $this->app->singleton('maknz.slack', function ($app) {
             return new Client(
                 $app['config']->get('slack.endpoint'),
                 [
