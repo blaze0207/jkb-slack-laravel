@@ -1,6 +1,6 @@
 <?php
 
-namespace Maknz\Slack\Laravel;
+namespace Jkb\Slack\Laravel;
 
 use RuntimeException;
 
