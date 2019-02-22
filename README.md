@@ -57,7 +57,7 @@ Then add the facade to your `aliases` array:
 ],
 ```
 
-Finally, publish the config file with `php artisan config:publish blaze0207/slack`. You'll find the config file at `app/config/packages/blaze0207/slack-laravel/config.php`.
+Finally, publish the config file with `php artisan config:publish jkb/slack`. You'll find the config file at `app/config/packages/jkb/slack-laravel/config.php`.
 
 ## Configuration
 
